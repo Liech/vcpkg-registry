@@ -1,3 +1,5 @@
+set(VCPKG_LIBRARY_LINKAGE static)
+
 if(EXISTS "${CURRENT_PORT_DIR}/../../../Vulcant/CMakeLists.txt")
     set(SOURCE_PATH "${CURRENT_PORT_DIR}/../../../Vulcant")
 else()
@@ -16,7 +18,6 @@ vcpkg_cmake_configure(
         -DBUILD_EXAMPLES=OFF
         -DBUILD_TESTS=OFF
         -DBUILD_GODOT_BINDINGS=OFF
-        -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=ON
 )
 
 vcpkg_cmake_install()
