@@ -1,10 +1,14 @@
-vcpkg_from_github(
-    OUT_SOURCE_PATH SOURCE_PATH
-    REPO Liech/Vulcant
-    REF "${VERSION}"
-    SHA512 0
-    HEAD_REF main
-)
+if(EXISTS "${CURRENT_PORT_DIR}/../../../Vulcant/CMakeLists.txt")
+    set(SOURCE_PATH "${CURRENT_PORT_DIR}/../../../Vulcant")
+else()
+    vcpkg_from_github(
+        OUT_SOURCE_PATH SOURCE_PATH
+        REPO Liech/Vulcant
+        REF "e043a5d99b5ef3aad5aa606d7c910a487ed32731"
+        SHA512 0
+        HEAD_REF main
+    )
+endif()
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
