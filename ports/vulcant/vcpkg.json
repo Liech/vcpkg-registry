@@ -1,0 +1,25 @@
+{
+  "name": "vulcant",
+  "version": "0.0.1",
+  "description": "Vulkan rendering and compute abstraction library",
+  "homepage": "https://github.com/Liech/Vulcant",
+  "license": "MIT",
+  "dependencies": [
+    "vcpkg-cmake",
+    "vcpkg-cmake-config",
+    "glm",
+    "nlohmann-json",
+    "lodepng",
+    "vulkan",
+    "shaderc",
+    "spirv-reflect",
+    "glfw3",
+    {
+      "name": "imgui",
+      "features": [
+        "glfw-binding",
+        "vulkan-binding"
+      ]
+    }
+  ]
+}

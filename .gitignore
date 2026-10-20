@@ -1,0 +1,5 @@
+# vcpkg registry
+.DS_Store
+*.pyc
+*~
+build/
