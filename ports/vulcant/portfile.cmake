@@ -9,14 +9,13 @@ vcpkg_from_github(
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
-        -DVULCANT_BUILD_EXAMPLES=OFF
-        -DVULCANT_BUILD_TESTS=OFF
+        -DBUILD_EXAMPLES=OFF
         -DBUILD_GODOT_BINDINGS=OFF
 )
 
 vcpkg_cmake_install()
 
-vcpkg_cmake_config_fixup(PACKAGE_NAME Vulcant CONFIG_PATH lib/cmake/Vulcant)
+vcpkg_cmake_config_fixup(PACKAGE_NAME Vulcant)
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 
