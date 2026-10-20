@@ -10,6 +10,7 @@ vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
         -DBUILD_EXAMPLES=OFF
+        -DBUILD_TESTS=OFF
         -DBUILD_GODOT_BINDINGS=OFF
 )
 
