@@ -1,0 +1,14 @@
+{
+  "name": "polyglot",
+  "version": "1.0.0",
+  "description": "Single API for Python and Lua scripting",
+  "homepage": "https://github.com/Liech/Polyglot",
+  "license": "MIT",
+  "dependencies": [
+    "vcpkg-cmake",
+    "vcpkg-cmake-config",
+    "nlohmann-json",
+    "lua",
+    "pybind11"
+  ]
+}

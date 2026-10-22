@@ -5,6 +5,7 @@ Custom vcpkg package registry for personal libraries.
 ## Available Packages
 
 * **`vulcant`**: Vulkan rendering and compute abstraction library.
+* **`polyglot`**: Single API for Python and Lua scripting.
 
 ## Usage in your project
 
@@ -22,19 +23,20 @@ Add a `vcpkg-configuration.json` next to your project's `vcpkg.json`:
       "repository": "https://github.com/Liech/vcpkg-registry",
       "baseline": "<commit-sha-from-this-repo>",
       "packages": [
-        "vulcant"
+        "vulcant",
+        "polyglot"
       ]
     }
   ]
 }
 ```
 
-Then add `"vulcant"` to your `vcpkg.json`:
+Then add `"polyglot"` (or `"vulcant"`) to your `vcpkg.json`:
 
 ```json
 {
   "dependencies": [
-    "vulcant"
+    "polyglot"
   ]
 }
 ```
@@ -42,6 +44,6 @@ Then add `"vulcant"` to your `vcpkg.json`:
 And in CMake:
 
 ```cmake
-find_package(Vulcant CONFIG REQUIRED)
-target_link_libraries(your_target PRIVATE Vulcant::Vulcant)
+find_package(Polyglot CONFIG REQUIRED)
+target_link_libraries(your_target PRIVATE Polyglot::Polyglot)
 ```
