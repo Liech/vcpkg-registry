@@ -1,6 +1,7 @@
 {
   "name": "vulcant",
   "version": "0.0.1",
+  "port-version": 1,
   "description": "Vulkan rendering and compute abstraction library",
   "homepage": "https://github.com/Liech/Vulcant",
   "license": "MIT",
