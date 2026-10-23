@@ -2,10 +2,14 @@
   "default": {
     "vulcant": {
       "baseline": "0.0.1",
-      "port-version": 0
+      "port-version": 1
     },
     "polyglot": {
       "baseline": "1.0.0",
+      "port-version": 0
+    },
+    "cadacomb": {
+      "baseline": "0.0.1",
       "port-version": 0
     }
   }

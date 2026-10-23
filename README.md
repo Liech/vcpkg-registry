@@ -6,6 +6,7 @@ Custom vcpkg package registry for personal libraries.
 
 * **`vulcant`**: Vulkan rendering and compute abstraction library.
 * **`polyglot`**: Single API for Python and Lua scripting.
+* **`cadacomb`**: Spatial data structures and CAD engine with optional rendering helper.
 
 ## Usage in your project
 
@@ -24,26 +25,45 @@ Add a `vcpkg-configuration.json` next to your project's `vcpkg.json`:
       "baseline": "<commit-sha-from-this-repo>",
       "packages": [
         "vulcant",
-        "polyglot"
+        "polyglot",
+        "cadacomb"
       ]
     }
   ]
 }
 ```
 
-Then add `"polyglot"` (or `"vulcant"`) to your `vcpkg.json`:
+### Adding CADacomb as a dependency
+
+**Spatial / CAD only (no Vulkan/rendering dependency):**
 
 ```json
 {
   "dependencies": [
-    "polyglot"
+    "cadacomb"
   ]
 }
 ```
 
-And in CMake:
+```cmake
+find_package(CADacomb CONFIG REQUIRED)
+target_link_libraries(your_target PRIVATE CADacomb::CADacomb)
+```
+
+**With Rendering Helper (`CADacombRender` + `vulcant`):**
+
+```json
+{
+  "dependencies": [
+    {
+      "name": "cadacomb",
+      "features": ["render"]
+    }
+  ]
+}
+```
 
 ```cmake
-find_package(Polyglot CONFIG REQUIRED)
-target_link_libraries(your_target PRIVATE Polyglot::Polyglot)
+find_package(CADacomb CONFIG REQUIRED COMPONENTS Render)
+target_link_libraries(your_target PRIVATE CADacomb::CADacomb CADacomb::CADacombRender)
 ```

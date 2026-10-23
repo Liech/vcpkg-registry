@@ -1,0 +1,21 @@
+{
+  "name": "cadacomb",
+  "version": "0.0.1",
+  "description": "Spatial data structures and CAD engine with optional rendering helper",
+  "homepage": "https://github.com/Liech/CADacomb",
+  "license": "MIT",
+  "dependencies": [
+    "vcpkg-cmake",
+    "vcpkg-cmake-config",
+    "glm",
+    "nlohmann-json"
+  ],
+  "features": {
+    "render": {
+      "description": "CADacomb rendering helper using Vulcant",
+      "dependencies": [
+        "vulcant"
+      ]
+    }
+  }
+}

@@ -2,19 +2,27 @@ set(VCPKG_LIBRARY_LINKAGE static)
 
 if(EXISTS "${CURRENT_PORT_DIR}/../../../Vulcant/CMakeLists.txt")
     set(SOURCE_PATH "${CURRENT_PORT_DIR}/../../../Vulcant")
+elseif(EXISTS "${CURRENT_PORT_DIR}/../../../../Vulcant/CMakeLists.txt")
+    set(SOURCE_PATH "${CURRENT_PORT_DIR}/../../../../Vulcant")
 else()
     vcpkg_from_github(
         OUT_SOURCE_PATH SOURCE_PATH
         REPO Liech/Vulcant
-        REF "e043a5d99b5ef3aad5aa606d7c910a487ed32731"
+        REF "45c6b92886d4b36885ace3e782d7de61f6248391"
         SHA512 0
         HEAD_REF main
     )
 endif()
 
+vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+    FEATURES
+        toolkit BUILD_TOOLKIT
+)
+
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
+        ${FEATURE_OPTIONS}
         -DBUILD_EXAMPLES=OFF
         -DBUILD_TESTS=OFF
         -DBUILD_GODOT_BINDINGS=OFF

@@ -14,7 +14,6 @@
     "shaderc",
     "spirv-reflect",
     "glfw3",
-    "shader-slang",
     {
       "name": "imgui",
       "features": [
@@ -22,5 +21,16 @@
         "vulkan-binding"
       ]
     }
-  ]
+  ],
+  "default-features": [
+    "toolkit"
+  ],
+  "features": {
+    "toolkit": {
+      "description": "High-level rendering toolkit with scene data, camera, and mesh renderers",
+      "dependencies": [
+        "shader-slang"
+      ]
+    }
+  }
 }
