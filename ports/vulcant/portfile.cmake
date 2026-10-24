@@ -8,8 +8,8 @@ else()
     vcpkg_from_github(
         OUT_SOURCE_PATH SOURCE_PATH
         REPO Liech/Vulcant
-        REF "45c6b92886d4b36885ace3e782d7de61f6248391"
-        SHA512 c29e02126ec261e3eb70cc3b513f1d87b4a404e4da3c1732a261d60fdfcb8c815a34a915ade057bbfa81fb77cec92931f1b7ef39e0edd846f697f903753262eb
+        REF "62633650720cc4b404a4f0e144a76a3bcd6db608"
+        SHA512 0
         HEAD_REF main
     )
 endif()
