@@ -1,0 +1,17 @@
+{
+  "name": "smlib",
+  "version": "0.1.0",
+  "description": "NVIDIA SMLib solid modeling kernel with smlibpy C++ extensions",
+  "homepage": "https://github.com/awv-informatik/smlibpy",
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

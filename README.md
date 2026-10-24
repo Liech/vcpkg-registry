@@ -7,6 +7,7 @@ Custom vcpkg package registry for personal libraries.
 * **`vulcant`**: Vulkan rendering and compute abstraction library.
 * **`polyglot`**: Single API for Python and Lua scripting.
 * **`cadacomb`**: Spatial data structures and CAD engine with optional rendering helper.
+* **`smlib`**: NVIDIA SMLib solid modeling kernel with smlibpy C++ extensions.
 
 ## Usage in your project
 
@@ -26,7 +27,8 @@ Add a `vcpkg-configuration.json` next to your project's `vcpkg.json`:
       "packages": [
         "vulcant",
         "polyglot",
-        "cadacomb"
+        "cadacomb",
+        "smlib"
       ]
     }
   ]
