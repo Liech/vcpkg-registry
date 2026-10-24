@@ -17,6 +17,7 @@ vcpkg_from_github(
 )
 
 vcpkg_replace_string("${USD_BREP_SOURCE_PATH}/source/SMLib/inc/SmTypes.h" "#define SM_EXPORT   __declspec( dllexport )" "#define SM_EXPORT")
+vcpkg_replace_string("${USD_BREP_SOURCE_PATH}/source/SMLib/inc/SmTArray.h" "#define SM_TARRAY_TEMPLATE_PREDECLARATION(x) template class SM_EXPORT SmTArray<x>" "#define SM_TARRAY_TEMPLATE_PREDECLARATION(x)")
 vcpkg_replace_string("${USD_BREP_SOURCE_PATH}/source/SM_API/inc/SmApiTypes.h" "__declspec(dllexport)" "")
 vcpkg_replace_string("${USD_BREP_SOURCE_PATH}/source/SM_API/inc/SmApiTypes.h" "__declspec(dllimport)" "")
 

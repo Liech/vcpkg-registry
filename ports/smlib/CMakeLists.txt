@@ -49,6 +49,7 @@ target_compile_definitions(smlib PUBLIC
     SM_GRAPHICS_CALLBACKS=1
     $<$<CONFIG:Release,RelWithDebInfo,MinSizeRel>:NDEBUG>
 )
+target_precompile_headers(smlib PRIVATE "${USD_BREP_DIR}/source/SMLib/inc/StdAfx.h")
 
 file(GLOB SM_API_SOURCES CONFIGURE_DEPENDS "${USD_BREP_DIR}/source/SM_API/src/*.cpp")
 smlibpy_patch_sources(SM_API_SOURCES SM_API)
@@ -71,6 +72,7 @@ target_include_directories(sm_api PUBLIC
 )
 target_compile_definitions(sm_api PUBLIC SM_API_EXPORTS)
 target_link_libraries(sm_api PUBLIC smlib)
+target_precompile_headers(sm_api PRIVATE "${USD_BREP_DIR}/source/SMLib/inc/StdAfx.h")
 
 if(MSVC)
     foreach(t smlib sm_api)
