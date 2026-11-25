@@ -8,6 +8,7 @@ Custom vcpkg package registry for personal libraries.
 * **`polyglot`**: Single API for Python and Lua scripting.
 * **`cadacomb`**: Spatial data structures and CAD engine with optional rendering helper.
 * **`smlib`**: NVIDIA SMLib solid modeling kernel with smlibpy C++ extensions.
+* **`ufbx`**: Single source file FBX file loader.
 
 ## Usage in your project
 
@@ -28,7 +29,8 @@ Add a `vcpkg-configuration.json` next to your project's `vcpkg.json`:
         "vulcant",
         "polyglot",
         "cadacomb",
-        "smlib"
+        "smlib",
+        "ufbx"
       ]
     }
   ]
