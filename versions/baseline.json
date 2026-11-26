@@ -19,6 +19,10 @@
     "ufbx": {
       "baseline": "0.23.1",
       "port-version": 0
+    },
+    "stl-reader-modified": {
+      "baseline": "1.0.0",
+      "port-version": 0
     }
   }
 }
