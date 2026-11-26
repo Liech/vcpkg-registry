@@ -1,0 +1,6 @@
+{
+  "name": "stl-reader-modified",
+  "version": "1.0.0",
+  "description": "Modified single-header STL reader with std::istream support (based on sreiter/stl_reader)",
+  "license": "BSD-2-Clause"
+}
